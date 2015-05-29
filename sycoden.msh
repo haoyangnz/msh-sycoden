@@ -15,6 +15,13 @@ fi
 
 alias scd="mode <<< 3"
 
+ss() {
+	sv
+	wt ss
+	nodemon server.js
+	wt
+}
+
 # }}}
 
 #}}}
