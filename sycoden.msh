@@ -22,12 +22,10 @@ fi
 alias scd="mode <<< 3"
 
 ss() {
-	if [[ $MODE == "SCD" ]]; then
-		sv
-		wt ss
-		nodemon server.js
-		wt
-	fi
+	sv
+	wt ss
+	nodemon server.js
+	wt
 }
 
 # }}}
