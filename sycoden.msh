@@ -2,6 +2,12 @@
 # Think of something to improve.
 # }}}
 
+#### Mode Trap {{{
+if [[ $MODE != "SCD" ]]; then
+	return
+fi
+# }}}
+
 #### SCD Development {{{
 
 # SCD Navigation {{{
@@ -16,10 +22,12 @@ fi
 alias scd="mode <<< 3"
 
 ss() {
-	sv
-	wt ss
-	nodemon server.js
-	wt
+	if [[ $MODE == "SCD" ]]; then
+		sv
+		wt ss
+		nodemon server.js
+		wt
+	fi
 }
 
 # }}}
