@@ -4,6 +4,8 @@
 
 #### SCD Development {{{
 
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
+
 # SCD Navigation {{{
 
 export SPJ_ROOT="$WORK/sycoden"
@@ -16,7 +18,7 @@ fi
 alias scd="mode <<< 3"
 
 ss() {
-	sv
+	pj
 	wt ss
 	nodemon server.js
 	wt
