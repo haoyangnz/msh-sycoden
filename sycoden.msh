@@ -32,7 +32,7 @@ ss() {
 
 # post a.json entity: Post a.json to http://localhost:3000/api/entity
 post() {
-	curl -X POST -d @$1 http://localhost:3000/api/$2
+	curl -H "Content-Type: application/json" -X POST -d @$1 http://localhost:3000/api/$2
 }
 
 # }}}
