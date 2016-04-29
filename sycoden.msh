@@ -2,12 +2,6 @@
 # Think of something to improve.
 # }}}
 
-#### Mode Trap {{{
-if [[ $MODE != "SCD" ]]; then
-	return
-fi
-# }}}
-
 #### SCD Development {{{
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
@@ -16,10 +10,8 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
 
 export SPJ_ROOT="$WORK/sycoden"
 export SPJ=ListSum
-if [[ $MODE == "SCD" ]]; then
-  export PJ_ROOT=$SPJ_ROOT
-  export PJ=$SPJ
-fi
+export PJ_ROOT=$SPJ_ROOT
+export PJ=$SPJ
 
 alias scd="mode <<< 3"
 
