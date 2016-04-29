@@ -25,6 +25,9 @@ alias scd="mode <<< 3"
 
 ss() {
 	pj
+	npm install
+	bower install
+	grunt setup
 	wt ss
 	nodemon server.js
 	wt
